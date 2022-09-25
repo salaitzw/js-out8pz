@@ -6,7 +6,10 @@ const appDiv = document.getElementById('app');
 appDiv.innerHTML = `
 <div class = "container">
   <button class = "shuffleCards">Shuffle cards</button>
-  <div class="imgContainer"></div>
+  <div class="imgContainer">
+    <div id = "imgOutline"></div>
+    <div id = "imgOutline"></div>
+  </div>
   <button class = "drawCard">draw card</button>
 </div>
 `;
@@ -19,7 +22,7 @@ i will comment the above variable because i dont want to request too many new id
 let deckId = "8102zucikz1r"
 const goShuffleCards = () => {
   console.log('testing of deckId', deckId);
-  fetch(`https://deckofcardsapi.com/api/deck/${deckId}/shuffle/?remaining=true`)
+  fetch(`https://deckofcardsapi.com/api/deck/${deckId}/shuffle/?remaining=false`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);

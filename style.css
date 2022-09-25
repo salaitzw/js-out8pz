@@ -28,13 +28,21 @@ button{
 }
 .imgContainer{
   justify-content: space-around;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 5px;
 }
+#imgOutline{
+  width: 225px;
+  height: 313px;
+  border: 1px solid black;
+}
 img{
-  margin: 5px;
-  width: 40%;
+  margin: 0;
+  width: 225px;
+  height: 313px;
 }
 .shuffleCards{
   align-self: flex-start;
